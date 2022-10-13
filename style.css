@@ -1,9 +1,11 @@
 /* Reset and Fonts */
 
-body{
+html,
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Lora', serif;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* =================
@@ -11,11 +13,12 @@ Navbar
 ================= */
 
 .site-title img {
-    width: 18rem;
+    width: 18em;
 }
 
-
 .container-nav {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,20 +37,27 @@ nav ul {
 }
 
 nav li {
-    margin-left: 2em;
+    margin-left: 1.5em;
 }
 
-nav a {
+nav a,
+.columns a{
     text-decoration: none;
     color: whitesmoke;
-    font-weight: 700;
-    padding: .25em 0;
+    font-weight: 600;
+    padding: .4em 0;
 }
 
 nav a:hover,
-nav a:focus {
-    color: #A57C00;
-    border-bottom: 1px solid #A57C00;
+nav a:focus,
+.columns a:hover,
+.columns a:focus {
+    color: #553E16;
+}
+
+nav a:hover,
+nav a:focus{
+    border-bottom: 1px solid #553E16;
 }
 
 /* =================
@@ -55,7 +65,7 @@ Layout
 ================= */
 
 .container{
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -89,7 +99,7 @@ Video
 
 .video .video-content h1{
     color: #fff;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2.3rem;
 }
 
@@ -99,9 +109,8 @@ span {
 }
 
 /* =================
-First Section
+Section ONE
 ================= */
-
 
 .section-one{
     text-align: center;
@@ -123,7 +132,7 @@ First Section
 }
 
 .section-one-content p{
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -141,7 +150,6 @@ Section two, three, four, five
     color: #162D54;
 }
 
-
 .sections{
     display: flex;
     justify-content: space-between;
@@ -156,15 +164,16 @@ Section two, three, four, five
     width: 40%;
     text-align: center;
     line-height: 1.8rem;
+    margin: 2em 0;
 }
 
 .section-content h2{
-    color: #A57C00;
+    color: #553E16;
     font-size: 1.6rem;    
-    margin-bottom: 2.5rem;
-    padding-bottom: 0.1rem;
-    border-bottom: 1.5px solid #A57C00;
-    font-weight: 700;
+    margin-bottom: 1.3em;
+    /* padding-bottom: 0.1em; */
+    border-bottom: 1.5px solid #553E16;
+    font-weight: 600;
 }
 
 .section-content p{
@@ -172,15 +181,68 @@ Section two, three, four, five
     font-weight: 400;
 }
 
+/* =================
+Footer
+================= */
 
-/* MediaQ */
+/* Layout */
 
-@media (max-width: 675px) {
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav li {
-        margin: .5em 0;
-    }
+footer{
+    background-color: #162D54;
+    color: whitesmoke;
+}
+
+.footer-container{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-container p{
+    padding-top: 2em;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+form input[type='email']{
+    width: 25%;
+    height: 2em;
+    margin: 2em;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+}
+
+form input[type='email']:focus {
+    border: 3px solid #553E16;
+}
+
+form button {
+    padding: 0.3em 0.7em;
+    background: whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+.columns{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1.5px solid #553E16;
+}
+
+.col-one,
+.col-two{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em 0;
+}
+
+.footer-icons a{
+    text-decoration: none;
+    color: whitesmoke;
 }
